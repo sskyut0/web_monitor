@@ -27,8 +27,7 @@ jobs:
     
     - name: Run web monitor
       run: |
-        cd scripts
-        ruby monitor.rb
+        bundle exec ruby scripts/monitor.rb
     
     - name: Configure git
       run: |
