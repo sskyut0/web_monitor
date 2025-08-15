@@ -1,0 +1,12 @@
+{
+  "sites": [
+    {
+      "id": "example_site",
+      "name": "Example Site",
+      "url": "https://example.com",
+      "selector": "main",
+      "exclude_selectors": [".ad", ".advertisement", ".banner", ".sponsored"],
+      "description": "サンプル監視対象サイト（実際の運用時に変更してください）"
+    }
+  ]
+}
