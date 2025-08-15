@@ -21,8 +21,8 @@ class WebMonitorDashboard {
         try {
             // Load status and history data in parallel
             const [statusResponse, historyResponse] = await Promise.all([
-                fetch('../data/status.json'),
-                fetch('../data/history.json')
+                fetch('./data/status.json'),
+                fetch('./data/history.json')
             ]);
 
             if (!statusResponse.ok) {

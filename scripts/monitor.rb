@@ -10,7 +10,7 @@ require 'uri'
 
 class WebMonitor
   def initialize
-    @data_dir = File.join(__dir__, '..', 'data')
+    @data_dir = File.join(__dir__, '..', 'docs', 'data')
     @sites_file = File.join(@data_dir, 'sites.json')
     @status_file = File.join(@data_dir, 'status.json')
     @history_file = File.join(@data_dir, 'history.json')
