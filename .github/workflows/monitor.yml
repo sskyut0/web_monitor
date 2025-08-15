@@ -1,0 +1,50 @@
+name: Web Monitor
+
+on:
+  # Run daily at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: false
+    
+    - name: Install dependencies
+      run: |
+        gem install nokogiri
+    
+    - name: Run web monitor
+      run: |
+        cd scripts
+        ruby monitor.rb
+    
+    - name: Configure git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+    
+    - name: Commit changes
+      run: |
+        git add data/
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update monitoring data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
+        fi
