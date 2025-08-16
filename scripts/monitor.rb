@@ -148,16 +148,16 @@ class WebMonitor
     doc = Nokogiri::HTML(html)
 
     # Extract target content
-    target = doc.css(selector)
-    return '' if target.empty?
+    # target = doc.css(selector)
+    # return '' if target.empty?
 
     # Remove excluded elements
-    exclude_selectors.each do |exclude_sel|
-      target.css(exclude_sel).remove
-    end
+    # exclude_selectors.each do |exclude_sel|
+    #   target.css(exclude_sel).remove
+    # end
 
     # Get text content and normalize
-    content = target.text.strip
+    content = doc.text.strip
 
     # Normalize whitespace and remove dynamic content
     content.gsub(/\s+/, ' ') # Multiple spaces to single space
