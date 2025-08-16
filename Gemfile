@@ -7,5 +7,5 @@ ruby '3.4.3'
 gem 'nokogiri', '~> 1.15'
 
 group :development do
-  gem 'rubocop', '~> 1.60', require: false
+  gem 'rubocop'
 end
