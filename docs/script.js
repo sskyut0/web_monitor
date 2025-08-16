@@ -57,9 +57,9 @@ class WebMonitorDashboard {
                 hour: '2-digit',
                 minute: '2-digit'
             });
-            lastUpdatedElement.textContent = `最終更新: ${formattedDate}`;
+            lastUpdatedElement.textContent = `最終コンテンツ更新: ${formattedDate}`;
         } else {
-            lastUpdatedElement.textContent = '最終更新: データなし';
+            lastUpdatedElement.textContent = '最終コンテンツ更新: まだ更新なし';
         }
     }
 

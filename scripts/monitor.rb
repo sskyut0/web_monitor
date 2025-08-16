@@ -41,9 +41,15 @@ class WebMonitor
       end
     end
 
+    # Find the most recent content change among all sites
+    most_recent_change = updated_sites
+                        .map { |site| site['last_change'] }
+                        .compact
+                        .max
+
     # Update status file
     new_status = {
-      'last_updated' => Time.now.utc.iso8601,
+      'last_updated' => most_recent_change,
       'sites' => updated_sites
     }
 
