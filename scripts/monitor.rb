@@ -163,12 +163,12 @@ class WebMonitor
     end
   end
 
-  def extract_content(html, _selector, _exclude_selectors = [])
+  def extract_content(html, selector, _exclude_selectors = [])
     doc = Nokogiri::HTML(html)
 
     # Extract target content
-    # target = doc.css(selector)
-    # return '' if target.empty?
+    target = doc.css(selector)
+    return '' if target.empty?
 
     # Remove excluded elements
     # exclude_selectors.each do |exclude_sel|
@@ -176,7 +176,7 @@ class WebMonitor
     # end
 
     # Get text content and normalize
-    content = doc.text.strip
+    content = target.text.strip
 
     # Normalize whitespace and remove dynamic content
     content.gsub(/\s+/, ' ') # Multiple spaces to single space
