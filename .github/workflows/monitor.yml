@@ -26,6 +26,8 @@ jobs:
         bundler-cache: true
     
     - name: Run web monitor
+      env:
+        MONITOR_ENCRYPTION_KEY: ${{ secrets.MONITOR_ENCRYPTION_KEY }}
       run: |
         bundle exec ruby scripts/monitor.rb
     
