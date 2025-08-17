@@ -16,7 +16,7 @@ class WebMonitor
     @sites_file = File.join(@data_dir, 'sites.json')
     @status_file = File.join(@data_dir, 'status.json')
     @history_file = File.join(@data_dir, 'history.json')
-    @encryption_key = ENV['MONITOR_ENCRYPTION_KEY'] || 'default-key-change-in-production'
+    @encryption_key = ENV.fetch('MONITOR_ENCRYPTION_KEY')
   end
 
   def run
