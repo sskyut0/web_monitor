@@ -172,6 +172,11 @@ body {
     text-decoration: underline;
 }
 
+.encrypted-url {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
 .site-meta {
     display: flex;
     flex-direction: column;

@@ -7,6 +7,8 @@ require 'digest'
 require 'time'
 require 'nokogiri'
 require 'uri'
+require 'openssl'
+require 'base64'
 
 class WebMonitor
   def initialize
@@ -14,6 +16,7 @@ class WebMonitor
     @sites_file = File.join(@data_dir, 'sites.json')
     @status_file = File.join(@data_dir, 'status.json')
     @history_file = File.join(@data_dir, 'history.json')
+    @encryption_key = ENV['MONITOR_ENCRYPTION_KEY'] || 'default-key-change-in-production'
   end
 
   def run
@@ -26,10 +29,12 @@ class WebMonitor
     updated_sites = []
 
     sites['sites'].each do |site|
-      puts "Checking site: #{site['name']} (#{site['url']})"
+      # Decrypt URL if encrypted
+      actual_url = site['encrypted'] ? decrypt_url(site['url']) : site['url']
+      puts "Checking site: #{site['name']}"
 
       begin
-        site_status = check_site(site, current_status, history)
+        site_status = check_site(site.merge('url' => actual_url), current_status, history, site)
         updated_sites << site_status
 
         puts "  Status: #{site_status['status']}"
@@ -37,15 +42,17 @@ class WebMonitor
       rescue StandardError => e
         puts "  Error: #{e.message}"
         error_status = create_error_status(site, e.message)
+        # Add encrypted flag to error status if original site was encrypted
+        error_status['encrypted'] = true if site['encrypted']
         updated_sites << error_status
       end
     end
 
     # Find the most recent content change among all sites
     most_recent_change = updated_sites
-                        .map { |site| site['last_change'] }
-                        .compact
-                        .max
+                         .map { |site| site['last_change'] }
+                         .compact
+                         .max
 
     # Update status file
     new_status = {
@@ -85,7 +92,7 @@ class WebMonitor
     File.write(@history_file, JSON.pretty_generate(history))
   end
 
-  def check_site(site, current_status, history)
+  def check_site(site, current_status, history, original_site = nil)
     # Fetch web content
     html_content = fetch_web_content(site['url'])
 
@@ -119,17 +126,23 @@ class WebMonitor
     # Keep only last 100 history entries per site
     history[site['id']] = history[site['id']].last(100)
 
-    # Return updated site status
-    {
+    # Return updated site status (use original encrypted URL if available)
+    display_url = original_site ? original_site['url'] : site['url']
+    encrypted_flag = original_site ? original_site['encrypted'] : false
+    
+    status_data = {
       'id' => site['id'],
       'name' => site['name'],
-      'url' => site['url'],
+      'url' => display_url,
       'status' => status,
       'last_check' => Time.now.utc.iso8601,
       'last_change' => change_detected ? Time.now.utc.iso8601 : previous_site&.dig('last_change'),
       'hash' => new_hash,
       'error' => nil
     }
+    
+    status_data['encrypted'] = true if encrypted_flag
+    status_data
   end
 
   def fetch_web_content(url)
@@ -150,7 +163,7 @@ class WebMonitor
     end
   end
 
-  def extract_content(html, selector, exclude_selectors = [])
+  def extract_content(html, _selector, _exclude_selectors = [])
     doc = Nokogiri::HTML(html)
 
     # Extract target content
@@ -193,6 +206,31 @@ class WebMonitor
       'hash' => nil,
       'error' => error_message
     }
+  end
+
+  def encrypt_url(url)
+    cipher = OpenSSL::Cipher.new('aes-256-cbc')
+    cipher.encrypt
+    key = Digest::SHA256.digest(@encryption_key)
+    cipher.key = key
+    iv = cipher.random_iv
+
+    encrypted = cipher.update(url) + cipher.final
+    Base64.encode64(iv + encrypted).strip
+  end
+
+  def decrypt_url(encrypted_data)
+    data = Base64.decode64(encrypted_data)
+    cipher = OpenSSL::Cipher.new('aes-256-cbc')
+    cipher.decrypt
+    key = Digest::SHA256.digest(@encryption_key)
+    cipher.key = key
+
+    iv = data[0..15]
+    encrypted = data[16..]
+    cipher.iv = iv
+
+    cipher.update(encrypted) + cipher.final
   end
 end
 

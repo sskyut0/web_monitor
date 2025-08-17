@@ -79,6 +79,10 @@ class WebMonitorDashboard {
         const statusClass = this.getStatusClass(site.status);
         const lastCheck = site.last_check ? new Date(site.last_check).toLocaleString('ja-JP') : 'なし';
         const lastChange = site.last_change ? new Date(site.last_change).toLocaleString('ja-JP') : 'なし';
+        const displayUrl = site.encrypted ? '🔒 暗号化されたURL' : site.url;
+        const urlElement = site.encrypted ? 
+            `<span class="encrypted-url">${displayUrl}</span>` : 
+            `<a href="${this.escapeHtml(site.url)}" target="_blank" rel="noopener">${this.escapeHtml(site.url)}</a>`;
 
         return `
             <div class="site-card">
@@ -89,9 +93,7 @@ class WebMonitorDashboard {
                     </div>
                 </div>
                 <div class="site-url">
-                    <a href="${this.escapeHtml(site.url)}" target="_blank" rel="noopener">
-                        ${this.escapeHtml(site.url)}
-                    </a>
+                    ${urlElement}
                 </div>
                 <div class="site-meta">
                     <div class="site-meta-item">

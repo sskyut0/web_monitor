@@ -3,10 +3,20 @@
     {
       "id": "cookpad",
       "name": "Cookpad Web",
-      "url": "https://cookpad.com/jp",
+      "url": "p0mbSZJAmMerAjTP+aZzP29uJgeMCFNRWR43mbUw1rMU9ATKEzOlooHK+pfY\n781w",
+      "encrypted": true,
       "selector": "main",
       "exclude_selectors": [],
       "description": "Cookpad web"
+    },
+    {
+      "id": "test",
+      "name": "Test 1",
+      "url": "2e8dfTtZ1CwH55hmGrJIXXJEOOoyyIlZOFdvpTPkdFtjKB5lg9pUopXhtgc6\nfcqGrLO85X5uiSXiI4tYQTLSLPWopSQb71CFQkQc8YLM+qUj/ks+Zh3bWSyW\nFSFReRyjzc5fQLdvbwTVYtDDFX7uQg==",
+      "encrypted": true,
+      "selector": "ul",
+      "exclude_selectors": [],
+      "description": "test 1"
     }
   ]
 }
