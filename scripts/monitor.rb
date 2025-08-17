@@ -9,6 +9,7 @@ require 'nokogiri'
 require 'uri'
 require 'openssl'
 require 'base64'
+require 'selenium-webdriver'
 
 class WebMonitor
   def initialize
@@ -129,7 +130,7 @@ class WebMonitor
     # Return updated site status (use original encrypted URL if available)
     display_url = original_site ? original_site['url'] : site['url']
     encrypted_flag = original_site ? original_site['encrypted'] : false
-    
+
     status_data = {
       'id' => site['id'],
       'name' => site['name'],
@@ -140,7 +141,7 @@ class WebMonitor
       'hash' => new_hash,
       'error' => nil
     }
-    
+
     status_data['encrypted'] = true if encrypted_flag
     status_data
   end
@@ -148,26 +149,22 @@ class WebMonitor
   def fetch_web_content(url)
     uri = URI(url)
 
-    Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
-      http.open_timeout = 10
-      http.read_timeout = 30
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('--headless')
 
-      request = Net::HTTP::Get.new(uri)
-      request['User-Agent'] = 'WebMonitor/1.0'
+    driver = Selenium::WebDriver.for :chrome, options: options
 
-      response = http.request(request)
-
-      raise "HTTP #{response.code}: #{response.message}" unless response.code.to_i.between?(200, 299)
-
-      response.body
-    end
+    driver.navigate.to uri
+    sleep 5
+    # require 'pry-rails'; binding.pry
+    driver.page_source
   end
 
   def extract_content(html, selector, _exclude_selectors = [])
     doc = Nokogiri::HTML(html)
 
     # Extract target content
-    target = doc.css(selector)
+    target = selector.nil? ? doc.text : doc.css(selector).text
     raise "Can't find selector" if target.empty?
 
     # Remove excluded elements
@@ -176,7 +173,7 @@ class WebMonitor
     # end
 
     # Get text content and normalize
-    content = target.text.strip
+    content = target.strip
 
     # Normalize whitespace and remove dynamic content
     content.gsub(/\s+/, ' ') # Multiple spaces to single space
