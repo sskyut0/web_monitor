@@ -168,7 +168,7 @@ class WebMonitor
 
     # Extract target content
     target = doc.css(selector)
-    return '' if target.empty?
+    raise "Can't find selector" if target.empty?
 
     # Remove excluded elements
     # exclude_selectors.each do |exclude_sel|
