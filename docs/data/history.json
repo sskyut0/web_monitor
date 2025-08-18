@@ -1,12 +1,6 @@
 {
   "cookpad": [
     {
-      "timestamp": "2025-08-17T06:38:50Z",
-      "status": "updated",
-      "hash": "a98a44f292bb6c434906df59957d4fbc",
-      "change_detected": true
-    },
-    {
       "timestamp": "2025-08-17T06:55:58Z",
       "status": "updated",
       "hash": "3ba210cb126c5cb868997a358b8574ec",
@@ -599,6 +593,12 @@
       "status": "updated",
       "hash": "72e880cb7834ec0bb48809bd277089cd",
       "change_detected": true
+    },
+    {
+      "timestamp": "2025-08-18T19:54:42Z",
+      "status": "updated",
+      "hash": "8045cadf9022579353d37f28aa3e7330",
+      "change_detected": true
     }
   ],
   "test": [
@@ -1186,6 +1186,12 @@
     },
     {
       "timestamp": "2025-08-18T19:43:53Z",
+      "status": "unchanged",
+      "hash": "49a425e61b3b032815949fee947fd39d",
+      "change_detected": false
+    },
+    {
+      "timestamp": "2025-08-18T19:54:50Z",
       "status": "unchanged",
       "hash": "49a425e61b3b032815949fee947fd39d",
       "change_detected": false
@@ -1779,15 +1785,15 @@
       "status": "updated",
       "hash": "91fd052a403b13e356c0f268071b004f",
       "change_detected": true
+    },
+    {
+      "timestamp": "2025-08-18T19:54:58Z",
+      "status": "updated",
+      "hash": "5457599183a43b557bee15babe7a8e8b",
+      "change_detected": true
     }
   ],
   "twitter": [
-    {
-      "timestamp": "2025-08-17T06:39:13Z",
-      "status": "unchanged",
-      "hash": "5f4434586ce277fb1327bb22e3a34bb8",
-      "change_detected": false
-    },
     {
       "timestamp": "2025-08-17T06:56:21Z",
       "status": "unchanged",
@@ -2378,6 +2384,12 @@
     },
     {
       "timestamp": "2025-08-18T19:44:08Z",
+      "status": "unchanged",
+      "hash": "256f894f5367e8e53ca997446bd8f009",
+      "change_detected": false
+    },
+    {
+      "timestamp": "2025-08-18T19:55:05Z",
       "status": "unchanged",
       "hash": "256f894f5367e8e53ca997446bd8f009",
       "change_detected": false
