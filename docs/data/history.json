@@ -1,12 +1,6 @@
 {
   "cookpad": [
     {
-      "timestamp": "2025-08-27T13:41:27Z",
-      "status": "updated",
-      "hash": "b0721f9c1234d7de05a2172f9d82e5a7",
-      "change_detected": true
-    },
-    {
       "timestamp": "2025-08-27T13:52:38Z",
       "status": "unchanged",
       "hash": "b0721f9c1234d7de05a2172f9d82e5a7",
@@ -599,15 +593,15 @@
       "status": "unchanged",
       "hash": "1c4aa1f6992f1fa200b2fc459b6610fe",
       "change_detected": false
+    },
+    {
+      "timestamp": "2025-08-28T21:42:00Z",
+      "status": "updated",
+      "hash": "569243794404dc861fc9530a6206a971",
+      "change_detected": true
     }
   ],
   "test": [
-    {
-      "timestamp": "2025-08-27T09:26:49Z",
-      "status": "unchanged",
-      "hash": "74d6d210a5f4b1b09562c2be8ccc4a54",
-      "change_detected": false
-    },
     {
       "timestamp": "2025-08-27T09:42:16Z",
       "status": "unchanged",
@@ -1201,15 +1195,15 @@
       "status": "unchanged",
       "hash": "3d55c40174456f1facb2d7470f7f6123",
       "change_detected": false
+    },
+    {
+      "timestamp": "2025-08-28T21:42:09Z",
+      "status": "unchanged",
+      "hash": "3d55c40174456f1facb2d7470f7f6123",
+      "change_detected": false
     }
   ],
   "test2": [
-    {
-      "timestamp": "2025-08-27T09:26:56Z",
-      "status": "updated",
-      "hash": "26f311b208f8add2d1ae93b7bc623cb5",
-      "change_detected": true
-    },
     {
       "timestamp": "2025-08-27T09:42:23Z",
       "status": "updated",
@@ -1803,15 +1797,15 @@
       "status": "updated",
       "hash": "5448bcd7ce763ba247350a10fec22e26",
       "change_detected": true
+    },
+    {
+      "timestamp": "2025-08-28T21:42:16Z",
+      "status": "updated",
+      "hash": "f5f8440938c1a504abd1dc2cb98a59d8",
+      "change_detected": true
     }
   ],
   "twitter": [
-    {
-      "timestamp": "2025-08-27T13:41:49Z",
-      "status": "unchanged",
-      "hash": "1a5e2eabbc9f5181f59ebe1b7fc61ae7",
-      "change_detected": false
-    },
     {
       "timestamp": "2025-08-27T13:53:04Z",
       "status": "unchanged",
@@ -2402,6 +2396,12 @@
     },
     {
       "timestamp": "2025-08-28T21:31:20Z",
+      "status": "unchanged",
+      "hash": "62920c7a2b66d8094415b289354c893b",
+      "change_detected": false
+    },
+    {
+      "timestamp": "2025-08-28T21:42:23Z",
       "status": "unchanged",
       "hash": "62920c7a2b66d8094415b289354c893b",
       "change_detected": false
