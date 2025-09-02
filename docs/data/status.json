@@ -1,12 +1,12 @@
 {
-  "last_updated": "2025-09-02T17:48:19Z",
+  "last_updated": "2025-09-02T17:58:39Z",
   "sites": [
     {
       "id": "cookpad",
       "name": "Cookpad Web",
       "url": "p0mbSZJAmMerAjTP+aZzP29uJgeMCFNRWR43mbUw1rMU9ATKEzOlooHK+pfY\n781w",
-      "status": "updated",
-      "last_check": "2025-09-02T17:48:04Z",
+      "status": "unchanged",
+      "last_check": "2025-09-02T17:58:23Z",
       "last_change": "2025-09-02T17:48:04Z",
       "hash": "dd28a932a628ce5d6c73f1245a2ee1ff",
       "error": null,
@@ -17,7 +17,7 @@
       "name": "アレ",
       "url": "2e8dfTtZ1CwH55hmGrJIXXJEOOoyyIlZOFdvpTPkdFtjKB5lg9pUopXhtgc6\nfcqGrLO85X5uiSXiI4tYQTLSLPWopSQb71CFQkQc8YLM+qUj/ks+Zh3bWSyW\nFSFReRyjzc5fQLdvbwTVYtDDFX7uQg==",
       "status": "unchanged",
-      "last_check": "2025-09-02T17:48:12Z",
+      "last_check": "2025-09-02T17:58:32Z",
       "last_change": null,
       "hash": "3d55c40174456f1facb2d7470f7f6123",
       "error": null,
@@ -28,9 +28,9 @@
       "name": "全体",
       "url": "abaewURgjBPIyavGmD1HPKqBmyCKP9nYNk6Qg03Dbx+pUr+zjcXZJUH9Popd\nossK",
       "status": "updated",
-      "last_check": "2025-09-02T17:48:19Z",
-      "last_change": "2025-09-02T17:48:19Z",
-      "hash": "3481a809fc5a90c2b549c2ca51597150",
+      "last_check": "2025-09-02T17:58:39Z",
+      "last_change": "2025-09-02T17:58:39Z",
+      "hash": "7724043f554c22b16e04ad611c9be254",
       "error": null,
       "encrypted": true
     },
@@ -38,11 +38,11 @@
       "id": "twitter",
       "name": "twitter",
       "url": "7buPUraCACW1J84z8GSr6AsoKqT61dBYf5iT1WqeUQrD9sctclaBhB6d661v\nPO5p",
-      "status": "unchanged",
-      "last_check": "2025-09-02T17:48:26Z",
-      "last_change": "2025-09-02T17:24:00Z",
-      "hash": "d62607ff0e9b45b1cf272e78a4b7c140",
-      "error": null,
+      "status": "error",
+      "last_check": "2025-09-02T17:58:46Z",
+      "last_change": null,
+      "hash": null,
+      "error": "Can't find selector",
       "encrypted": true
     }
   ]
