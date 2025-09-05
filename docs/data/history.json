@@ -1,12 +1,6 @@
 {
   "cookpad": [
     {
-      "timestamp": "2025-09-04T07:31:00Z",
-      "status": "unchanged",
-      "hash": "39b940d5510b77697bed713f311f6c92",
-      "change_detected": false
-    },
-    {
       "timestamp": "2025-09-04T07:42:02Z",
       "status": "updated",
       "hash": "429a743dccc5706fda1cead6890a6268",
@@ -599,6 +593,12 @@
       "status": "unchanged",
       "hash": "489200d97dabaa7efbd07f4faad77012",
       "change_detected": false
+    },
+    {
+      "timestamp": "2025-09-05T15:09:08Z",
+      "status": "updated",
+      "hash": "c40c84936fa784d70d925cb9e1e74c30",
+      "change_detected": true
     }
   ],
   "test": [
@@ -1807,12 +1807,6 @@
   ],
   "twitter": [
     {
-      "timestamp": "2025-09-04T07:31:23Z",
-      "status": "unchanged",
-      "hash": "d62607ff0e9b45b1cf272e78a4b7c140",
-      "change_detected": false
-    },
-    {
       "timestamp": "2025-09-04T07:42:25Z",
       "status": "unchanged",
       "hash": "d62607ff0e9b45b1cf272e78a4b7c140",
@@ -2405,6 +2399,12 @@
       "status": "unchanged",
       "hash": "11524a6909326b945662f4f8613a9212",
       "change_detected": false
+    },
+    {
+      "timestamp": "2025-09-05T15:09:28Z",
+      "status": "updated",
+      "hash": "9d989643d134a82850f3323ca9ab94ba",
+      "change_detected": true
     }
   ]
 }
