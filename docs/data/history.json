@@ -1,12 +1,6 @@
 {
   "cookpad": [
     {
-      "timestamp": "2025-09-25T18:56:55Z",
-      "status": "updated",
-      "hash": "886cfa274a9bc9456a69b2c0450ac3ee",
-      "change_detected": true
-    },
-    {
       "timestamp": "2025-09-25T19:18:43Z",
       "status": "updated",
       "hash": "ab68480cab8c2d70b2c4a1776dd36e8c",
@@ -599,15 +593,15 @@
       "status": "updated",
       "hash": "ba2673d60c6a99114d8688d63e479a7d",
       "change_detected": true
+    },
+    {
+      "timestamp": "2025-09-27T03:52:27Z",
+      "status": "unchanged",
+      "hash": "ba2673d60c6a99114d8688d63e479a7d",
+      "change_detected": false
     }
   ],
   "test": [
-    {
-      "timestamp": "2025-09-25T16:00:24Z",
-      "status": "unchanged",
-      "hash": "71513e804356da5f30fc0c6c32de2147",
-      "change_detected": false
-    },
     {
       "timestamp": "2025-09-25T16:33:32Z",
       "status": "unchanged",
@@ -1201,15 +1195,15 @@
       "status": "unchanged",
       "hash": "71a2453b3ccf41d6c556f8cb5a56e795",
       "change_detected": false
+    },
+    {
+      "timestamp": "2025-09-27T03:52:36Z",
+      "status": "unchanged",
+      "hash": "71a2453b3ccf41d6c556f8cb5a56e795",
+      "change_detected": false
     }
   ],
   "test2": [
-    {
-      "timestamp": "2025-09-25T16:00:31Z",
-      "status": "updated",
-      "hash": "b3788886d456e17d1a4d17a3f33860e2",
-      "change_detected": true
-    },
     {
       "timestamp": "2025-09-25T16:33:39Z",
       "status": "updated",
@@ -1802,6 +1796,12 @@
       "timestamp": "2025-09-27T03:41:21Z",
       "status": "updated",
       "hash": "2a001206c8b1eabaf95061fda78eba24",
+      "change_detected": true
+    },
+    {
+      "timestamp": "2025-09-27T03:52:43Z",
+      "status": "updated",
+      "hash": "fe2236a8402ea2a65b52a6dbb4eba76c",
       "change_detected": true
     }
   ],
