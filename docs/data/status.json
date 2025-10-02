@@ -1,12 +1,12 @@
 {
-  "last_updated": "2025-10-02T14:42:31Z",
+  "last_updated": "2025-10-02T14:53:07Z",
   "sites": [
     {
       "id": "cookpad",
       "name": "Cookpad Web",
       "url": "p0mbSZJAmMerAjTP+aZzP29uJgeMCFNRWR43mbUw1rMU9ATKEzOlooHK+pfY\n781w",
-      "status": "updated",
-      "last_check": "2025-10-02T14:42:06Z",
+      "status": "unchanged",
+      "last_check": "2025-10-02T14:52:46Z",
       "last_change": "2025-10-02T14:42:06Z",
       "hash": "ae808d96be64d96f0f74e496716dbdb3",
       "error": null,
@@ -16,22 +16,22 @@
       "id": "test",
       "name": "アレ",
       "url": "2e8dfTtZ1CwH55hmGrJIXXJEOOoyyIlZOFdvpTPkdFtjKB5lg9pUopXhtgc6\nfcqGrLO85X5uiSXiI4tYQTLSLPWopSQb71CFQkQc8YLM+qUj/ks+Zh3bWSyW\nFSFReRyjzc5fQLdvbwTVYtDDFX7uQg==",
-      "status": "unchanged",
-      "last_check": "2025-10-02T14:42:15Z",
+      "status": "error",
+      "last_check": "2025-10-02T14:52:52Z",
       "last_change": null,
-      "hash": "466c5ce879e71aa8c20f3716e5b6cec0",
-      "error": null,
+      "hash": null,
+      "error": "Can't find selector",
       "encrypted": true
     },
     {
       "id": "test2",
       "name": "全体",
       "url": "abaewURgjBPIyavGmD1HPKqBmyCKP9nYNk6Qg03Dbx+pUr+zjcXZJUH9Popd\nossK",
-      "status": "updated",
-      "last_check": "2025-10-02T14:42:22Z",
-      "last_change": "2025-10-02T14:42:22Z",
-      "hash": "dcd8c1a216606be4f373d73405c50859",
-      "error": null,
+      "status": "error",
+      "last_check": "2025-10-02T14:52:58Z",
+      "last_change": null,
+      "hash": null,
+      "error": "Can't find selector",
       "encrypted": true
     },
     {
@@ -39,9 +39,9 @@
       "name": "twitter",
       "url": "7buPUraCACW1J84z8GSr6AsoKqT61dBYf5iT1WqeUQrD9sctclaBhB6d661v\nPO5p",
       "status": "updated",
-      "last_check": "2025-10-02T14:42:31Z",
-      "last_change": "2025-10-02T14:42:31Z",
-      "hash": "239e630330b3e5907aa58b6c438d4500",
+      "last_check": "2025-10-02T14:53:07Z",
+      "last_change": "2025-10-02T14:53:07Z",
+      "hash": "1a71f6e51fff21ab6a3c1a0b52710287",
       "error": null,
       "encrypted": true
     }
