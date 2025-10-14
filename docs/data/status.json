@@ -1,14 +1,14 @@
 {
-  "last_updated": "2025-10-14T21:30:27Z",
+  "last_updated": "2025-10-14T21:41:43Z",
   "sites": [
     {
       "id": "cookpad",
       "name": "Cookpad Web",
       "url": "p0mbSZJAmMerAjTP+aZzP29uJgeMCFNRWR43mbUw1rMU9ATKEzOlooHK+pfY\n781w",
       "status": "updated",
-      "last_check": "2025-10-14T21:30:04Z",
-      "last_change": "2025-10-14T21:30:04Z",
-      "hash": "4d5f4c16994a25f9b835841a88aba354",
+      "last_check": "2025-10-14T21:41:23Z",
+      "last_change": "2025-10-14T21:41:23Z",
+      "hash": "22cbfa10e44e0da8347be90dae5230cc",
       "error": null,
       "encrypted": true
     },
@@ -16,22 +16,22 @@
       "id": "test",
       "name": "アレ",
       "url": "2e8dfTtZ1CwH55hmGrJIXXJEOOoyyIlZOFdvpTPkdFtjKB5lg9pUopXhtgc6\nfcqGrLO85X5uiSXiI4tYQTLSLPWopSQb71CFQkQc8YLM+qUj/ks+Zh3bWSyW\nFSFReRyjzc5fQLdvbwTVYtDDFX7uQg==",
-      "status": "unchanged",
-      "last_check": "2025-10-14T21:30:13Z",
+      "status": "error",
+      "last_check": "2025-10-14T21:41:29Z",
       "last_change": null,
-      "hash": "3529baac6f9972f4dfd3ad6c012e28db",
-      "error": null,
+      "hash": null,
+      "error": "Can't find selector",
       "encrypted": true
     },
     {
       "id": "test2",
       "name": "全体",
       "url": "abaewURgjBPIyavGmD1HPKqBmyCKP9nYNk6Qg03Dbx+pUr+zjcXZJUH9Popd\nossK",
-      "status": "updated",
-      "last_check": "2025-10-14T21:30:20Z",
-      "last_change": "2025-10-14T21:30:20Z",
-      "hash": "3b1547466c605a892648972c7146a185",
-      "error": null,
+      "status": "error",
+      "last_check": "2025-10-14T21:41:35Z",
+      "last_change": null,
+      "hash": null,
+      "error": "Can't find selector",
       "encrypted": true
     },
     {
@@ -39,9 +39,9 @@
       "name": "twitter",
       "url": "7buPUraCACW1J84z8GSr6AsoKqT61dBYf5iT1WqeUQrD9sctclaBhB6d661v\nPO5p",
       "status": "updated",
-      "last_check": "2025-10-14T21:30:27Z",
-      "last_change": "2025-10-14T21:30:27Z",
-      "hash": "3ad6bb351368a73ae264bf0ffbbfd464",
+      "last_check": "2025-10-14T21:41:43Z",
+      "last_change": "2025-10-14T21:41:43Z",
+      "hash": "32e60bc23a2b47d36330ef1e3d668460",
       "error": null,
       "encrypted": true
     }
